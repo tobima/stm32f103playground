@@ -1,3 +1,5 @@
 *~
 .o
 .hex
+Firmware/build
+.dep
