@@ -14,11 +14,29 @@ On the ARM-JTAG of the
 | 9 | TCK/SWCLK | The SWD Clock Signal
 | 15 | nSRST/RESET | System reset – probably optional 
 
-[http://www.micromouseonline.com/2011/11/05/stlink-swd-for-stm32/ Source]
+[Source](http://www.micromouseonline.com/2011/11/05/stlink-swd-for-stm32/)
+
+On the STM32F4 DISCOVERY Board the programmer (ST-LINK) can be used to programm the STM32F103.
+Simly disconnect both jumpers of **CN3**
+
+An connect the following Pins of **CN2**
+Debug connector CN2 (SWD)
+
+| Pin | CN2 | Designation | ARM JTAG PIN |
+| --- | --- | --- | --- |
+| 1 | - | VDD from application | |
+| 2 | SWCLK | SWD clock | 9 |
+| 3 | GND | Ground | 8 |
+| 4 | SWDIO | SWD data input/output | 7 |
+| 5 | NRST | RESET of target MCU | 15 |
+| 6 | - | Reserved | |
+
+The **Pin 1** of the ARM-JTAG can be connected to **3V** connecter of the *STM32F4 DISCOVERY-BOARD*, so only one USB Connection to the PC is necessary to power the whole system.
+
 
 ## PIN Background
 
-## STM103 JTAG
+### STM103 JTAG
 
  JTAG Signals
 
@@ -34,9 +52,9 @@ On the ARM-JTAG of the
 | GND |	Digital ground. |
 | RESET | RSTIN/ pin — Connect this pin to the (active low) reset input of the target CPU. |
 
-[http://www.keil.com/support/man/docs/ulinkpro/ulinkpro_hw_if_jtag20.htm Source]
+[Source](http://www.keil.com/support/man/docs/ulinkpro/ulinkpro_hw_if_jtag20.htm Source)
 
-## ST-Link V2
+### ST-Link V2
 
 Debug connector CN2 (SWD)
 
@@ -49,4 +67,4 @@ Debug connector CN2 (SWD)
 | 5 | NRST | RESET of target MCU |
 | 6 | SWO | Reserved |
 
-Found in chapter 4.2.2 of the STM32F4DISCOVERY hardware and layout document
+Found in chapter 4.2.2 of the *STM32F4DISCOVERY hardware and layout document*
