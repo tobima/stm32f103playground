@@ -17,10 +17,9 @@ On the ARM-JTAG of the
 [Source](http://www.micromouseonline.com/2011/11/05/stlink-swd-for-stm32/)
 
 On the STM32F4 DISCOVERY Board the programmer (ST-LINK) can be used to programm the STM32F103.
-Simly disconnect both jumpers of **CN3**
+Simply disconnect both jumpers of **CN3**.
 
-An connect the following Pins of **CN2**
-Debug connector CN2 (SWD)
+Connect the following Pins of **CN2**
 
 | Pin | CN2 | Designation | ARM JTAG PIN |
 | --- | --- | --- | --- |
@@ -31,7 +30,7 @@ Debug connector CN2 (SWD)
 | 5 | NRST | RESET of target MCU | 15 |
 | 6 | - | Reserved | |
 
-The **Pin 1** of the ARM-JTAG can be connected to **3V** connecter of the *STM32F4 DISCOVERY-BOARD*, so only one USB Connection to the PC is necessary to power the whole system.
+The **Pin 1** of the ARM-JTAG can be connected to **3V** pin of the *STM32F4 DISCOVERY-BOARD*, so only one USB Connection to the PC is necessary to power the whole system.
 
 
 ## PIN Background
